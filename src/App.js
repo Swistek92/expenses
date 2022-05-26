@@ -1,6 +1,8 @@
+import React from 'react';
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
-import Expenses from './components/Expenses';
+import ExpenseItem from './components/Expenses/ExpenseItem';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 function App() {
   const expenses = [
     {
@@ -24,8 +26,20 @@ function App() {
     },
   ];
 
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement(
+  //     'h2',
+  //     {},
+  //     'lets get started!',
+  //     React.createElement(Expenses, { expenses: expenses })
+  //   )
+  // );
+
   return (
     <div className='App'>
+      <NewExpense />
       <Expenses expenses={expenses} />
     </div>
   );
